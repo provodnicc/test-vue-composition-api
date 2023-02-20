@@ -66,7 +66,7 @@ docker pull ghcr.io/provodnicc/test-vue-composition-api-back:backend
 
 ### To test docker image
 ```
-docker run -p 8000:8000 ghcr.io/provodnicc/test-vue-composition-api-back
+docker run -p 8000:8000 run --env-file {path_to_file} ghcr.io/provodnicc/test-vue-composition-api-back
 ```
 
 ## Support
