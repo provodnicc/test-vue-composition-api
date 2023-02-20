@@ -4,16 +4,17 @@ on:
   push:
     branches:
       - "backend"
-env: 
-  REGISTRY: ghcr.io 
+env:
+  REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build:
+  build-and-push-image:
     runs-on: ubuntu-latest
-    permissions: 
-      contents: 
-        read_packages: write
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
