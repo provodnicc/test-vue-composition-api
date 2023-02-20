@@ -6,5 +6,6 @@ WORKDIR /app
 COPY . .
 RUN npm ci
 
-RUN npm run serve
 
+
+ENTRYPOINT [ "npm", "run", "serve" ]
