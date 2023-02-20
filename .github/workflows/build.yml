@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build and push docker
         run: |
-          DOCKER_NAME=requests-app
+          DOCKER_NAME=requests_api-app
           DOCKER_IMAGE=docker.pkg.github.com/provodnicc/${GITHUB_REPOSITORY##*/}/${DOCKER_NAME}:master
           docker login docker.pkg.github.com -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
           docker build -f Dockerfile --pull -t $DOCKER_IMAGE .
