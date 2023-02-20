@@ -14,8 +14,6 @@ jobs:
         run: |
           DOCKER_NAME=requests_api-app
           DOCKER_IMAGE=docker.pkg.github.com/provodnicc/${GITHUB_REPOSITORY##*/}/${DOCKER_NAME}:backend
-          
-
-          docker tag ${{ matrix.name }} $DOCKER_IMAGE
+          docker login docker.pkg.github.com -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
           docker build -f Dockerfile --pull -t $DOCKER_IMAGE .
           docker push $DOCKER_IMAGE
