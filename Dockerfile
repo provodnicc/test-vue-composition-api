@@ -1,6 +1,6 @@
 FROM node:alpine
 
-EXPOSE 1000
+EXPOSE 8000
 
 
 
