@@ -8,5 +8,3 @@ RUN npm ci
 
 RUN npm run serve
 
-
-ENTRYPOINT [ "node", "main.js" ]
